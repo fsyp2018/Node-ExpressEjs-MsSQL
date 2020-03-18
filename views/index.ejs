@@ -29,7 +29,7 @@
             <th scope="row"><%- data[prop].username %></th>
             <td><%- data[prop].userid %></td>
             <td><%- data[prop].pwd %></td>
-            <td>@<%- data[prop].email %></td>
+            <td><%- data[prop].email %></td>
             <td><a class="icon mr-5" href="/edit/<%- data[prop].id %>" title="Edit"><i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i></a><a class="icon" href="/delete/<%- data[prop].id %>" title="Delete" onclick="return confirm('刪除使用者:<%- data[prop].username %>')"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a></td>
           </tr>
         </tbody>

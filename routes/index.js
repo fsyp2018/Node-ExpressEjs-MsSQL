@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
       console.log(err)
     }
     var requset = new sql.Request();
-    requset.query("SELECT TOP 10 [id],[userid],[pwd],[username],[email] FROM [demo].[dbo].[UserList]", function (err, result) {
+    requset.query("SELECT * FROM UserList order by id", function (err, result) {
       if (err) {
         console.log(err)
         res.send(err)
@@ -29,7 +29,7 @@ router.get('/edit/:id', function (req, res, next) {
     }
     var requset = new sql.Request();
     requset.input('id', sql.Int, req.params.id)
-    requset.query("SELECT * FROM [demo].[dbo].[UserList] where id = @id", function (err, result) {
+    requset.query("SELECT * FROM UserList where id = @id", function (err, result) {
       if (err) {
         console.log(err)
         res.send(err)
