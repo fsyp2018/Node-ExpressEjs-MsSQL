@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Express With MSSQL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-md-center"></div>
+    <form method="POST" action="/add">
+    <table class="table mt-3 col-md-auto">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">UserName</th>
+            <th scope="col">UserID</th>
+            <th scope="col">Passwd</th>
+            <th scope="col">Email</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><input type="text" name="username" value=""></th>
+            <td><input type="text" name="userid" value=""></td>
+            <td><input type="text" name="pwd" value=""></td>
+            <td><input type="text" name="email" value=""></td>
+            <td><button class="btn btn-dark" type="submit">Save</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+      <button class="btn btn-dark" type="button" onclick="javascript: location.href='/'; ">Back</button>
+    </div>
+  </div>
+</body>
+
+</html>

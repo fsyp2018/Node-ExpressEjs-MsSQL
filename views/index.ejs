@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Express With MSSQL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-md-center"></div>
+    <h1>Express With MSSQL </h1>
+    <a class="btn btn-dark" href="/add" title="title">Add</a>
+    <span>總筆數：<%- data.length %></span>
+    <table class="table mt-3 col-md-auto">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">UserName</th>
+            <th scope="col">UserID</th>
+            <th scope="col">Passwd</th>
+            <th scope="col">Email</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <% for (var prop in data) { %> 
+        <tbody>
+          <tr>
+            <th scope="row"><%- data[prop].username %></th>
+            <td><%- data[prop].userid %></td>
+            <td><%- data[prop].pwd %></td>
+            <td>@<%- data[prop].email %></td>
+            <td><a class="icon mr-5" href="/edit/<%- data[prop].id %>" title="Edit"><i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i></a><a class="icon" href="/delete/<%- data[prop].id %>" title="Delete" onclick="return confirm('刪除使用者:<%- data[prop].username %>')"><i class="fa fa-trash fa-2x" aria-hidden="true"></i></a></td>
+          </tr>
+        </tbody>
+      <% } %> 
+      </table>
+    </div> 
+</body>
+</html>
